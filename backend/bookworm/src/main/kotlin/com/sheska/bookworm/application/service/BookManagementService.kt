@@ -6,7 +6,7 @@ import com.sheska.bookworm.application.dto.UpdateBookRequest
 
 interface BookManagementService {
     fun findByISBN(isbn: Long):BookResponse?
-    fun findAll(): BookResponse
+    fun findAll(): List<BookResponse>
     fun save(addBookRequest: AddBookRequest):BookResponse
     fun update(updateBookRequest: UpdateBookRequest): BookResponse
     fun deleteByISBN(isbn: Long): Unit
